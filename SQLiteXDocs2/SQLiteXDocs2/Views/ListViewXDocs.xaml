@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="SQLiteXDocs2.Views.ListViewXDocs">
+          
+    <StackLayout Orientation="Vertical">
+        <ListView
+            ItemsSource="{Binding .}"
+            ListView.RowHeight="150">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical">
+                                <Entry Text="{Binding Id}" IsEnabled="False"/>
+                                <Entry Text="{Binding Symbol}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+                             <!-- <Entry Text="{Binding Id}" IsEnabled="False"/>
+                            <Entry Text="{Binding Symbol}" />-->
+      </StackLayout> 
+</ContentPage>
